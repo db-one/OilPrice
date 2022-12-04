@@ -30,30 +30,38 @@ sensor:
 
 新版的配置(直接编辑模式)：
 ```
+
+
 <ha-icon icon="mdi:update"></ha-icon> {{ state_attr('sensor.zui_xin_you_jie', 'update_time')}} 
-##  <center>92#<ha-icon icon="mdi:gas-station"></ha-icon>  <font color=#ea4335> {{ state_attr('sensor.zui_xin_you_jie', '92')}} </font>&nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;95# <ha-icon icon="mdi:gas-station"></ha-icon>  <font color=#fbbc05>  {{ state_attr('sensor.zui_xin_you_jie', '95')}} </font> <p> 98# <ha-icon icon="mdi:gas-station"></ha-icon> <font color=#4285f4>  {{ state_attr('sensor.zui_xin_you_jie', '98')}}</font>&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 0#柴<ha-icon icon="mdi:gas-station"></ha-icon> <font color=#34a853>  {{ state_attr('sensor.zui_xin_you_jie', '0')}} </font></center> 
+##  <center>92#<ha-icon icon="mdi:gas-station"></ha-icon>  <font color=#ea4335> {{ state_attr('sensor.zui_xin_you_jie', '92')}} </font>&nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;95#<ha-icon icon="mdi:gas-station"></ha-icon>  <font color=#fbbc05>  {{ state_attr('sensor.zui_xin_you_jie', '95')}} </font> <p> 98#<ha-icon icon="mdi:gas-station"></ha-icon> <font color=#4285f4>  {{ state_attr('sensor.zui_xin_you_jie', '98')}}</font>&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 0#柴<ha-icon icon="mdi:gas-station"></ha-icon> <font color=#34a853>  {{ state_attr('sensor.zui_xin_you_jie', '0')}} </font></center> 
 - {{ states('sensor.zui_xin_you_jie') }} 
 - {{ state_attr('sensor.zui_xin_you_jie', 'tips')}}
+
+
 ```
 新版的配置(源代码编辑模式)：
-```yaml
+```
+
+
 type: markdown
 content: >
-  <ha-icon icon="mdi:update"></ha-icon> {{
-  state_attr('sensor.zui_xin_you_jie', 'update_time')}} 
+  <ha-icon icon="mdi:update"></ha-icon> {{ state_attr('sensor.zui_xin_you_jie',
+  'update_time')}} 
 
   ##  <center>92#<ha-icon icon="mdi:gas-station"></ha-icon>  <font
-  color=#ea4335> {{ state_attr('sensor.zui_xin_you_jie', '92')}}
-  </font>&nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;95#
-  <ha-icon icon="mdi:gas-station"></ha-icon>  <font color=#fbbc05> 
-  {{ state_attr('sensor.zui_xin_you_jie', '95')}} </font> <p> 98#
-  <ha-icon icon="mdi:gas-station"></ha-icon> <font color=#4285f4> 
-  {{ state_attr('sensor.zui_xin_you_jie', '98')}}</font>&nbsp; 
-  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 0#柴<ha-icon
-  icon="mdi:gas-station"></ha-icon> <font color=#34a853>  {{
-  state_attr('sensor.zui_xin_you_jie', '0')}} </font></center> 
+  color=#ea4335> {{ state_attr('sensor.zui_xin_you_jie', '92')}} </font>&nbsp;
+  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;95#<ha-icon
+  icon="mdi:gas-station"></ha-icon>  <font color=#fbbc05>  {{
+  state_attr('sensor.zui_xin_you_jie', '95')}} </font> <p> 98#<ha-icon
+  icon="mdi:gas-station"></ha-icon> <font color=#4285f4>  {{
+  state_attr('sensor.zui_xin_you_jie', '98')}}</font>&nbsp;  &nbsp;  &nbsp; 
+  &nbsp;  &nbsp;  &nbsp;  &nbsp; 0#柴<ha-icon icon="mdi:gas-station"></ha-icon>
+  <font color=#34a853>  {{ state_attr('sensor.zui_xin_you_jie', '0')}}
+  </font></center> 
 
   - {{ states('sensor.zui_xin_you_jie') }} 
 
   - {{ state_attr('sensor.zui_xin_you_jie', 'tips')}}
+
+
 ```
