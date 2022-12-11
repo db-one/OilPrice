@@ -4,17 +4,17 @@
 数据源地址： http://www.qiyoujiage.com
 
 # 安装
-1 手动安装，放入 <config directory>/custom_components/ 目录
-  
-2 hacs安装 CUSTOM REPOSITORIES中填入：https://github.com/aalavender/OilPrice
+1 手动安装，两个文件夹分别 放入 <config directory>/custom_components/  packages和目录
+
+2 hacs安装 CUSTOM REPOSITORIES中填入：https://github.com/db-one/OilPrice-zui-xin-you-jia
 
 # 配置
 **Example configuration.yaml:**
 ```yaml
-sensor:
-  - platform: oilprice
-    name: 最新油价
-    region: shandong
+# 加载自定义配置文件
+homeassistant:
+  packages: !include_dir_named packages
+
 ```
 
 
@@ -33,7 +33,7 @@ sensor:
 
 
 <ha-icon icon="mdi:update"></ha-icon> {{ state_attr('sensor.zui_xin_you_jie', 'update_time')}} 
-##  <center>92#<ha-icon icon="mdi:gas-station"></ha-icon>  <font color=#ea4335> {{ state_attr('sensor.zui_xin_you_jie', '92')}} </font>&nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;95#<ha-icon icon="mdi:gas-station"></ha-icon>  <font color=#fbbc05>  {{ state_attr('sensor.zui_xin_you_jie', '95')}} </font> <p> 98#<ha-icon icon="mdi:gas-station"></ha-icon> <font color=#4285f4>  {{ state_attr('sensor.zui_xin_you_jie', '98')}}</font>&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 0#柴<ha-icon icon="mdi:gas-station"></ha-icon> <font color=#34a853>  {{ state_attr('sensor.zui_xin_you_jie', '0')}} </font></center> 
+##  <center>92#<ha-icon icon="mdi:gas-station"></ha-icon>  <font color=#ea4335> {{ state_attr('sensor.zui_xin_you_jie', '92')}} </font>&nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;95#<ha-icon icon="mdi:gas-station"></ha-icon>  <font color=#fbbc05>  {{ state_attr('sensor.zui_xin_you_jie', '95')}} </font> <p> 98#<ha-icon icon="mdi:gas-station"></ha-icon> <font color=#4285f4>  {{ state_attr('sensor.zui_xin_you_jie', '98')}}</font>&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 0 # <ha-icon icon="mdi:gas-station"></ha-icon> <font color=#34a853>  {{ state_attr('sensor.zui_xin_you_jie', '0')}} </font></center> 
 - {{ states('sensor.zui_xin_you_jie') }} 
 - {{ state_attr('sensor.zui_xin_you_jie', 'tips')}}
 
@@ -55,7 +55,7 @@ content: >
   state_attr('sensor.zui_xin_you_jie', '95')}} </font> <p> 98#<ha-icon
   icon="mdi:gas-station"></ha-icon> <font color=#4285f4>  {{
   state_attr('sensor.zui_xin_you_jie', '98')}}</font>&nbsp;  &nbsp;  &nbsp; 
-  &nbsp;  &nbsp;  &nbsp;  &nbsp; 0#柴<ha-icon icon="mdi:gas-station"></ha-icon>
+  &nbsp;  &nbsp;  &nbsp;  &nbsp; 0 # <ha-icon icon="mdi:gas-station"></ha-icon>
   <font color=#34a853>  {{ state_attr('sensor.zui_xin_you_jie', '0')}}
   </font></center> 
 
