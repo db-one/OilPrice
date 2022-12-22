@@ -4,7 +4,11 @@
 数据源地址： http://www.qiyoujiage.com
 
 # 安装
-1 手动安装，两个文件夹分别 放入 <config directory>/custom_components/  packages和目录
+1 手动安装，两个文件夹分别 放入 <config directory> /custom_components 和 /packages目录,
+
+并修改 packages/oilprice.yaml 文件内为自己本省拼音名字
+
+如  region: shanghai
 
 2 hacs安装 CUSTOM REPOSITORIES中填入：https://github.com/db-one/OilPrice-zui-xin-you-jia
 
