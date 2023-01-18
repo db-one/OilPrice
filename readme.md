@@ -1,5 +1,5 @@
 # 简介
-抓取最新的油价信息，包括油价涨跌提醒（默认8小时更新一次数据）
+抓取最新的油价信息，包括油价涨跌提醒（默认1小时更新一次数据）
 
 数据源地址： http://www.qiyoujiage.com
 
@@ -42,13 +42,24 @@ homeassistant:
 - {{ state_attr('sensor.zui_xin_you_jie', 'tips')}}
 
 
+
+
+
+
+<ha-icon icon="mdi:update"></ha-icon> {{ state_attr('sensor.zui_xin_you_jie', 'update_time')}} 
+##  <center>92#<ha-icon icon="mdi:gas-station"></ha-icon>  <font color=#ea4335> {{ state_attr('sensor.zui_xin_you_jie', '92')}} </font>&nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;95#<ha-icon icon="mdi:gas-station"></ha-icon>  <font color=#fbbc05>  {{ state_attr('sensor.zui_xin_you_jie', '95')}} </font></center> 
+- {{ states('sensor.zui_xin_you_jie') }} 
+- {{ state_attr('sensor.zui_xin_you_jie', 'tips')}}
+
+
+
 ```
 新版的配置(源代码编辑模式)：
 ```
 
 
 type: markdown
-content: >
+content: >+
   <ha-icon icon="mdi:update"></ha-icon> {{ state_attr('sensor.zui_xin_you_jie',
   'update_time')}} 
 
@@ -66,6 +77,24 @@ content: >
   - {{ states('sensor.zui_xin_you_jie') }} 
 
   - {{ state_attr('sensor.zui_xin_you_jie', 'tips')}}
+
+
+
+type: markdown
+content: >+
+  <ha-icon icon="mdi:update"></ha-icon> {{ state_attr('sensor.zui_xin_you_jie',
+  'update_time')}} 
+
+  ##  <center>92#<ha-icon icon="mdi:gas-station"></ha-icon>  <font
+  color=#ea4335> {{ state_attr('sensor.zui_xin_you_jie', '92')}} </font>&nbsp;
+  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;95#<ha-icon
+  icon="mdi:gas-station"></ha-icon>  <font color=#fbbc05>  {{
+  state_attr('sensor.zui_xin_you_jie', '95')}} </font></center> 
+
+  - {{ states('sensor.zui_xin_you_jie') }} 
+
+  - {{ state_attr('sensor.zui_xin_you_jie', 'tips')}}
+
 
 
 ```
